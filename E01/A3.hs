@@ -1,4 +1,4 @@
-module A3 where
+module E01.A3 where
 
 -- length und maximum sind bereits in Prelude definiert.
 -- In der Klausur stehen die Funktionen aus Prelude üblicherweise leider

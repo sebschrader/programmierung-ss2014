@@ -1,4 +1,4 @@
-module A2 where
+module E01.A2 where
 
 f :: [Int] -> [Int]
 f [] = []

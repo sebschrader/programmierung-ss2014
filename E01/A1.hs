@@ -1,5 +1,5 @@
 --Deklariere das Modul A1
-module A1 where
+module E01.A1 where
 
 -- (a)
 square :: [Int] -> [Int]
