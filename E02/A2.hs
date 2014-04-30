@@ -38,7 +38,7 @@ first (x:_, _) = x
 
 rest :: Queue -> Queue
 rest ([], _) = error "E2.A2.rest: empty queue"
-rest (x:xs, ys) = (xs, ys)
+rest (x:xs, ys) = mkProper (xs, ys)
 
 mkProper :: Queue -> Queue
 mkProper ([], ys) = (reverse ys, [])
