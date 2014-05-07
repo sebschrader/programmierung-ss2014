@@ -11,7 +11,7 @@ gen1 a = a:gen1 (a+1)
 
 -- Für Experten: List comprehensions.
 gen2 :: [Int]
-gen = [1..]
+gen2 = [1..]
 
 -- (b)
 {-
