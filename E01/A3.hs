@@ -5,6 +5,7 @@ module E01.A3 where
 -- nicht zur Verfügung, daher definieren wir sie hier erneut, müssen aber
 -- den automatischen Import mit hiding unterdrücken.
 import Prelude hiding (length, maximum)
+import Data.List (foldl')
 
 -- (a)
 l :: [[Int]]
@@ -43,6 +44,10 @@ length (x:xs) = 1 + length xs
 -- vordefiniert.
 length1 :: [Int] -> Int
 length1 = foldr (\x y -> y + 1) 0
+
+-- Alternativ: Strikte Faltung mit Data.List.foldl'.
+length2 :: [Int] -> Int
+length2 = foldl' (\x _ -> x + 1) 0
 
 maximum :: [Int] -> Int
 maximum [] = error "A3.maximum: empty list"
