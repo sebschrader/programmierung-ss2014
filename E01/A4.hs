@@ -9,6 +9,10 @@ gen = gen1 1
 gen1 :: Int -> [Int]
 gen1 a = a:gen1 (a+1)
 
+-- Für Experten: List comprehensions.
+gen2 :: [Int]
+gen = [1..]
+
 -- (b)
 {-
   Haskell nutzt lazy-evaluation oder auch call-by-need genannt, obwohl der
