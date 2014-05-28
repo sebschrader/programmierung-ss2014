@@ -1,4 +1,4 @@
-module A2 where
+module E05.A2 where
 
 data Tree a = Node a [Tree a] deriving Show
 
