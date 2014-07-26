@@ -25,3 +25,11 @@ isHeap2' :: Tree -> Int -> Bool
 isHeap2' Nil _ = True
 isHeap2' (Branch n l r) m = n <= m && isHeap2' l n && isHeap2' r n
 
+-- Variante: Ohne Hilfsfunktion. Auch wieder doppeltes Pattern Matching.
+isHeap3 :: Tree -> Bool
+isHeap3 Nil                                          = True
+isHeap3 (Branch n Nil              Nil)              = True
+isHeap3 (Branch n l@(Branch i _ _) Nil)              = i <= n && isHeap3 l
+isHeap3 (Branch n Nil              r@(Branch i _ _)) = j <= n && isHeap3 r
+isHeap3 (Branch n l@(Branch i _ _) r@(Branch j _ _)) = i <= n && j <= n && isHeap3 l && isHeap3 r
+
