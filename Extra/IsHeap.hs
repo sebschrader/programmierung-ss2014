@@ -9,7 +9,7 @@ data Tree = Branch Int Tree Tree | Nil deriving Show
 -- erfüllen.
 isHeap :: Tree -> Bool
 isHeap Nil = True
-isHeap t@(Branch n l r) = hasSmallerKey l n && hasSmallerKey r n && isHeap l && isHeap r
+isHeap (Branch n l r) = hasSmallerKey l n && hasSmallerKey r n && isHeap l && isHeap r
 
 hasSmallerKey :: Tree -> Int -> Bool
 hasSmallerKey Nil _ = True
